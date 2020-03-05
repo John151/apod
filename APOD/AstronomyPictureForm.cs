@@ -107,6 +107,7 @@ namespace APOD
             // TODO: Show title in lblTitle
             lblTitle.Text = apodResponse.Title;
             // TODO: Format and show image credits in lblCredits
+
             lblCredits.Text = $"Image credit: {apodResponse.Copyright}";
             // TODO: Convert date string from response, which is in the form yyyy-mm-dd, into a DateTime
             // TODO: format and display the date string in lblDate
