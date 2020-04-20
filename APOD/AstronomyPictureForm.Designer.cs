@@ -45,9 +45,10 @@
             // picAstronomyPicture
             // 
             this.picAstronomyPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picAstronomyPicture.Location = new System.Drawing.Point(12, 114);
+            this.picAstronomyPicture.Location = new System.Drawing.Point(9, 93);
+            this.picAstronomyPicture.Margin = new System.Windows.Forms.Padding(2);
             this.picAstronomyPicture.Name = "picAstronomyPicture";
-            this.picAstronomyPicture.Size = new System.Drawing.Size(776, 426);
+            this.picAstronomyPicture.Size = new System.Drawing.Size(582, 346);
             this.picAstronomyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAstronomyPicture.TabIndex = 0;
             this.picAstronomyPicture.TabStop = false;
@@ -57,24 +58,28 @@
             this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescription.Location = new System.Drawing.Point(12, 619);
-            this.lblDescription.MaximumSize = new System.Drawing.Size(776, 400);
+            this.lblDescription.Location = new System.Drawing.Point(9, 503);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescription.MaximumSize = new System.Drawing.Size(582, 325);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(776, 179);
+            this.lblDescription.Size = new System.Drawing.Size(582, 146);
             this.lblDescription.TabIndex = 1;
             // 
             // txtDate
             // 
-            this.txtDate.Location = new System.Drawing.Point(494, 15);
+            this.txtDate.Location = new System.Drawing.Point(370, 12);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(2);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(100, 22);
+            this.txtDate.Size = new System.Drawing.Size(76, 20);
             this.txtDate.TabIndex = 1;
+            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
             // 
             // btnGetToday
             // 
-            this.btnGetToday.Location = new System.Drawing.Point(15, 11);
+            this.btnGetToday.Location = new System.Drawing.Point(11, 9);
+            this.btnGetToday.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetToday.Name = "btnGetToday";
-            this.btnGetToday.Size = new System.Drawing.Size(193, 30);
+            this.btnGetToday.Size = new System.Drawing.Size(145, 24);
             this.btnGetToday.TabIndex = 0;
             this.btnGetToday.Text = "Get Today\'s Picture";
             this.btnGetToday.UseVisualStyleBackColor = true;
@@ -82,9 +87,10 @@
             // 
             // btnGetForDate
             // 
-            this.btnGetForDate.Location = new System.Drawing.Point(616, 11);
+            this.btnGetForDate.Location = new System.Drawing.Point(462, 9);
+            this.btnGetForDate.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetForDate.Name = "btnGetForDate";
-            this.btnGetForDate.Size = new System.Drawing.Size(172, 30);
+            this.btnGetForDate.Size = new System.Drawing.Size(129, 24);
             this.btnGetForDate.TabIndex = 2;
             this.btnGetForDate.Text = "Get Picture for Date";
             this.btnGetForDate.UseVisualStyleBackColor = true;
@@ -94,9 +100,10 @@
             // 
             this.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDate.Location = new System.Drawing.Point(12, 554);
+            this.lblDate.Location = new System.Drawing.Point(9, 450);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(263, 52);
+            this.lblDate.Size = new System.Drawing.Size(198, 43);
             this.lblDate.TabIndex = 5;
             // 
             // lblCredits
@@ -105,9 +112,10 @@
             this.lblCredits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lblCredits.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCredits.Location = new System.Drawing.Point(525, 554);
+            this.lblCredits.Location = new System.Drawing.Point(394, 450);
+            this.lblCredits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(263, 52);
+            this.lblCredits.Size = new System.Drawing.Size(198, 43);
             this.lblCredits.TabIndex = 6;
             this.lblCredits.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -116,9 +124,10 @@
             this.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitle.Location = new System.Drawing.Point(12, 60);
+            this.lblTitle.Location = new System.Drawing.Point(9, 49);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(776, 40);
+            this.lblTitle.Size = new System.Drawing.Size(582, 33);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -126,19 +135,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(450, 18);
+            this.label1.Location = new System.Drawing.Point(338, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Date";
             // 
             // progressBar
             // 
             this.progressBar.ForeColor = System.Drawing.Color.Maroon;
-            this.progressBar.Location = new System.Drawing.Point(232, 264);
+            this.progressBar.Location = new System.Drawing.Point(174, 214);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar.MarqueeAnimationSpeed = 40;
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(315, 23);
+            this.progressBar.Size = new System.Drawing.Size(236, 19);
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar.TabIndex = 9;
             this.progressBar.Visible = false;
@@ -151,10 +162,10 @@
             // 
             // AstronomyPictureForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(4)))), ((int)(((byte)(4)))));
-            this.ClientSize = new System.Drawing.Size(806, 807);
+            this.ClientSize = new System.Drawing.Size(604, 609);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
@@ -166,6 +177,7 @@
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.picAstronomyPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AstronomyPictureForm";
             this.Text = "Astronomy Picture of the Day";
             this.Load += new System.EventHandler(this.Form1_Load);

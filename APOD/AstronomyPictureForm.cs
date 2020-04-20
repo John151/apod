@@ -19,6 +19,8 @@ namespace APOD
             // formatted as MM/DD/YYYY   done-John
             DateTime today = DateTime.Today;
             GetAPOD(today);
+
+            txtDate.Text = today.ToString("MM/dd/yyyy");
         }
 
         private void btnGetToday_Click(object sender, EventArgs e)
@@ -104,11 +106,27 @@ namespace APOD
         // TODO: Create new method to display data from an APODResponse in the form.
         private void LoadImageResponseIntoForm(APODResponse apodResponse)
         {
+            
             // TODO: Show title in lblTitle
             lblTitle.Text = apodResponse.Title;
             // TODO: Format and show image credits in lblCredits
 
-            lblCredits.Text = $"Image credit: {apodResponse.Copyright}";
+            string copyright = apodResponse.Copyright;
+            
+            copyright = copyright.Replace("\n", " "); //fixes error where last name is on a newline, check 04/11/2020 for future debug
+            string copyrightLower = copyright.ToLower(); //to lower to identify "image credit" already listed
+
+            if (copyrightLower.Contains("image credit"))
+            {
+                lblCredits.Text = copyright;
+            }
+            else
+            {
+                lblCredits.Text = $"Image credit: {copyright}";
+
+            }
+
+
             // TODO: Convert date string from response, which is in the form yyyy-mm-dd, into a DateTime
             // TODO: format and display the date string in lblDate
             DateTime date = DateTime.Parse(apodResponse.Date);
@@ -204,6 +222,11 @@ namespace APOD
             }
 
             EnableForm(true);   // In any case, enable the user interface 
+        }
+
+        private void txtDate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
